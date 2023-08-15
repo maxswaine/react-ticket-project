@@ -4,4 +4,4 @@ type TeamMember = {
   role: string;
 };
 
-export default Team;
+export default TeamMember;

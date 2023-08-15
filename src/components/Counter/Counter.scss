@@ -1,4 +1,23 @@
 .counter {
   display: flex;
   flex-direction: row;
+  &__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 2em;
+    width: 2em;
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+  }
+  &__result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    font-size: large;
+  }
 }

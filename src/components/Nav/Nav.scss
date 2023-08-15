@@ -1,0 +1,14 @@
+.nav {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  &__image {
+    height: 10vh;
+    margin: 30px;
+  }
+  &__heading {
+    font-size: xx-large;
+  }
+}
