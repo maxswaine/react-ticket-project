@@ -1,14 +1,15 @@
 .nav {
   height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   &__image {
     height: 10vh;
     margin: 30px;
   }
   &__heading {
     font-size: xx-large;
+    color: black;
   }
 }

@@ -1,15 +1,31 @@
 .team-card {
   display: flex;
   flex-direction: column;
+  color: black;
   margin: 20px;
-  padding: 5px;
+  padding: 10px;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 40vw;
   height: auto;
   object-fit: contain;
   border-radius: 20px;
   aspect-ratio: 1/1;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  &__name {
+    text-align: center;
+    font-size: medium;
+  }
+  &__role {
+    font-size: medium;
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-card {
+    width: 25vw;
+  }
 }
