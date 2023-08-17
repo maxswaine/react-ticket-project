@@ -1,19 +1,24 @@
+import { TeamMember } from "../../types/Team";
 import Counter from "../Counter/Counter";
+import NameCard from "../NameCard/NameCard";
 import "./TicketCard.scss";
 
 export type CardProps = {
-  name: string;
-  role: string;
+  teamMember: TeamMember[];
 };
 
-const Card = ({ name, role }: CardProps) => {
+const TicketCard = ({ teamMember }: CardProps) => {
   return (
-    <div className="team-card">
-      <h3 className="team-card__name">{name}</h3>
-      <h3 className="team-card__role">{role}</h3>
-      <Counter />
+    <div>
+      {teamMember.map((individualMember) => (
+        <div key={individualMember.id} className="ticket-card">
+          <NameCard name={individualMember.name} role={individualMember.role} />
+          <Counter />
+        </div>
+      ))}
     </div>
   );
 };
 
-export default Card;
+
+export default TicketCard;

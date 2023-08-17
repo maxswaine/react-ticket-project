@@ -1,7 +1,13 @@
-type TeamMember = {
+export type TeamMember = {
   id: number;
   name: string;
   role: string;
+  profile: Profile;
 };
 
-export default TeamMember;
+export type Profile = {
+  experience: string;
+  department: string;
+  techstack: string[];
+  profilePicture: string;
+}

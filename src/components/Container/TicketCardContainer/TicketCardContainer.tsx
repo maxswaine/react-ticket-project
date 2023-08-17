@@ -1,14 +1,14 @@
-import SearchBox from "../SearchBox/SearchBox";
-import DropdownBox from "../DropdownBox/DropdownBox";
-import Card from "../TicketCard/TicketCard";
-import TeamMember from "../../types/Team";
+import SearchBox from "../../SearchBox/SearchBox";
+import DropdownBox from "../../DropdownBox/DropdownBox";
+import TicketCard from "../../TicketCard/TicketCard";
+import { TeamMember } from "../../../types/Team";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 type CardContainerProps = {
   teamMembers: TeamMember[];
 };
 
-const CardLayout = ({ teamMembers }: CardContainerProps) => {
+const TicketCardLayout = ({ teamMembers }: CardContainerProps) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [jobSelection, setJobSelection] = useState<string>("");
 
@@ -31,25 +31,26 @@ const CardLayout = ({ teamMembers }: CardContainerProps) => {
   });
 
   return (
-    <>
+    <div className="team-card">
       <SearchBox
+        key="SearchBox"
         label="Team Members"
         handleInput={handleInput}
         searchTerm={searchTerm}
       />
       <DropdownBox
+        key="DropBox"
         label="Job Role"
         option={teamMembers} // Pass the team members data here
         handleInput={handleChange}
       />
       {filteredMembers.map((filteredTeamMember) => (
-        <Card
+        <TicketCard
           key={filteredTeamMember.id}
-          name={filteredTeamMember.name}
-          role={filteredTeamMember.role}
+          teamMember={[filteredTeamMember]}
         />
       ))}
-    </>
+    </div>
   );
 };
-export default CardLayout;
+export default TicketCardLayout;

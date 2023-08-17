@@ -1,14 +1,14 @@
 import { FormEventHandler } from "react";
 import team from "../../data/team";
-import TeamMember from "../../types/Team";
+import {TeamMember} from "../../types/Team";
 
 type DropdownBoxProps = {
   label: string;
   option: TeamMember[];
-  handleInput: FormEventHandler<HTMLSelectElement>;
+  handleInput: (FormEventHandler<HTMLSelectElement>);
 };
 
-const DropdownBox = ({ label, option, handleInput }: DropdownBoxProps) => {
+const DropdownBox = ({ label, handleInput }: DropdownBoxProps) => {
   const capitalizedLabel = label[0].toUpperCase() + label.slice(1);
   const occurredRoles = new Set<string>();
 

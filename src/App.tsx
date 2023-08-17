@@ -1,17 +1,28 @@
 import "./App.scss";
-import Card from "./components/TicketCard/TicketCard";
 import team from "./data/team";
 import Nav from "./components/Nav/Nav";
-import CardLayout from "./components/Container/CardContainer";
+import TicketCardLayout from "./components/Container/TicketCardContainer/TicketCardContainer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NameCardContainer from "./components/Container/NameCardContainer/NameCardContainer";
 
 const App = () => {
   return (
-    <div className="app">
-      <Nav />
-      <section className="team-card__area">
-        <CardLayout teamMembers={team} />
-      </section>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Nav />
+        <Routes>
+          <Route
+            path="/tickets"
+            element={<TicketCardLayout teamMembers={team} />}
+          />
+          <Route path="/" element={<NameCardContainer teamMembers={team} />} />
+          <Route
+            path="profiles"
+            element={<NameCardContainer teamMembers={team} />}
+          />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 };
 
