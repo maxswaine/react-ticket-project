@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { TeamMember } from "../../types/Team";
 import Counter from "../Counter/Counter";
-import NameCard from "../NameCard/NameCard";
 import "./TicketCard.scss";
 
 export type CardProps = {
@@ -10,14 +9,20 @@ export type CardProps = {
 
 const TicketCard = ({ teamMember }: CardProps) => {
   return (
-    <div>
+    <div className="ticket-card">
       {teamMember.map((individualMember) => (
-        <Link key={individualMember.id} to={`/profiles/${individualMember.id}`}>
-          <div key={individualMember.id} className="ticket-card">
-            <NameCard teamMember={individualMember} />
-            <Counter />
-          </div>
-        </Link>
+        <div key={individualMember.id} className="ticket-card__info">
+          <Link
+            key={individualMember.id}
+            to={`/profiles/${individualMember.id}`}
+          >
+            <div key={individualMember.id} className="ticket-card">
+              <h3 className="team-card__heading">{individualMember.name}</h3>
+              <h3 className="team-card__heading">{individualMember.role}</h3>
+            </div>
+          </Link>
+          <Counter />
+        </div>
       ))}
     </div>
   );

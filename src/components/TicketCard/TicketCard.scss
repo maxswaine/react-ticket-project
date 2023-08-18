@@ -1,4 +1,4 @@
-.team-card {
+.ticket-card {
   display: flex;
   flex-direction: column;
   color: black;
@@ -7,12 +7,14 @@
   justify-content: center;
   align-items: center;
   width: 40vw;
-  height: auto;
   object-fit: contain;
   border-radius: 20px;
   aspect-ratio: 1/1;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  &__info {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    height: 45vh;
+  }
   &__name {
     text-align: center;
     font-size: medium;

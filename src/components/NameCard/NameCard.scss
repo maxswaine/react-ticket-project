@@ -1,0 +1,16 @@
+.team-card {
+  width: 60vw;
+  text-align: start;
+  &__heading {
+    margin: auto;
+  }
+  &__img {
+    width: 250px;
+    height: 250px;
+  }
+  &__profile {
+  }
+}
+.team-card__profile--span {
+  font-weight: 100;
+}

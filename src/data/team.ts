@@ -112,7 +112,7 @@ const team: TeamMember[] = [
       department: "Miscellaneous",
       techstack: ["Strength and Endurance", "Intimidation"],
       profilePicture:
-        "https://ichef.bbci.co.uk/images/ic/1200x675/p03twx6g.jpg",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/66/Phil_mitchell.jpg/200px-Phil_mitchell.jpg",
     },
   },
 ];

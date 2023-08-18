@@ -3,7 +3,7 @@
   "author": "Max Swaine",
   "homepage": "maxswaine.github.io/react-ticket-project",
   "private": true,
-  "version": "0.0.0",
+  "version": "1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,7 +15,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.15.0"
+    "react-router-dom": "^6.15.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -30,5 +31,8 @@
     "sass": "^1.65.1",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
-  }
+  },
+  "main": "maxswaine.github.io/react-ticket-project",
+  "repository": "https://github.com/maxswaine/react-ticket-project.git",
+  "license": "MIT"
 }

@@ -1,6 +1,7 @@
 .counter {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   &__arrow {
     display: flex;
     justify-content: center;
@@ -11,6 +12,7 @@
     background-color: black;
     color: white;
     font-size: 1.3rem;
+    border-radius: 20px;
   }
   &__result {
     display: flex;
