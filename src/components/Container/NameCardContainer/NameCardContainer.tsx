@@ -1,5 +1,6 @@
 import { TeamMember } from "../../../types/Team";
-import NameCard from "../../NameCard/NameCard";
+import "./NameCardContainer.scss";
+import { Link } from "react-router-dom";
 
 type NameCardContainerProps = {
   teamMembers: TeamMember[];
@@ -11,7 +12,9 @@ const NameCardContainer = ({ teamMembers }: NameCardContainerProps) => {
   return (
     <div className="name-card__container">
       {team.map((member) => (
-        <NameCard key={member.id} name={member.name} role={member.role} />
+        <Link key={member.id} to={`/profiles/${member.id}`}>
+          <h2 className="name-card__header">{member.name}</h2>
+        </Link>
       ))}
     </div>
   );

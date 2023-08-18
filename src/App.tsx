@@ -4,6 +4,7 @@ import Nav from "./components/Nav/Nav";
 import TicketCardLayout from "./components/Container/TicketCardContainer/TicketCardContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NameCardContainer from "./components/Container/NameCardContainer/NameCardContainer";
+import ProfileCard from "./components/ProfileCard/ProfileCard";
 
 const App = () => {
   return (
@@ -19,6 +20,10 @@ const App = () => {
           <Route
             path="profiles"
             element={<NameCardContainer teamMembers={team} />}
+          />
+          <Route
+            path="/profiles/:id"
+            element={<ProfileCard teamMembers={team} />}
           />
         </Routes>
       </div>
